@@ -10,6 +10,7 @@ export const initialState: Todo[] = [
 
 const _todoReducer = createReducer(
   initialState,
+  on(actions.deleteAll, state => state.filter(todo => !todo.completed)),
   on(actions.create, (state, { text }) => [...state, new Todo(text)]),
   on(actions.toggle, (state, { id }) => state.map(todo => id === todo.id ? { ...todo, completed: !todo.completed } : todo)),
   on(actions.edit, (state, { text, id }) => state.map(todo => id === todo.id ? { ...todo, text } : todo)),

@@ -8,4 +8,6 @@ export const edit = createAction('[TODO] edit', props<{ text: string, id: number
 
 export const deleteTodo = createAction('[TODO] delete', props<{ id: number }>());
 
-export const toggleAll = createAction('[TODO] toddlgeAll', props<{ completed: boolean }>());
+export const toggleAll = createAction('[TODO] toggleAll', props<{ completed: boolean }>());
+
+export const deleteAll = createAction('[TODO] deleteAll');
