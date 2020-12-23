@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-page.component.css']
 })
 export class TodoPageComponent implements OnInit {
+  completed: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
